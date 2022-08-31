@@ -1,0 +1,283 @@
+<!doctype html>
+    <html lang="zh-Hant" class="no-js">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>嘉義市公共圖書館</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="vendor/animate.css">
+    <link rel="stylesheet" href="css/hyui.css">
+
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper mp">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#">網站導覽</a></li>
+                        <li><a href="#">文化局首頁</a></li>
+                        <li><a href="#">中文版</a></li>
+                        <li><a href="#">常見問題</a></li
+                    </ul>
+                </nav>
+                <!-- navigation End -->
+
+                <h1>
+                    <a href="index.html"><img src="images/logo.png" alt="嘉義市公共圖書館" /></a>
+                </h1>
+                <!-- Search Start -->
+                <div class="search">
+                    <form action="" class="form_inline">
+                        <!-- <select name="" id="selectSample">
+                            <option value="" aria-labelledby="館藏查詢">館藏查詢</option>
+                            <option value="" aria-labelledby="選項二">選項二</option>
+                            <option value="" aria-labelledby="選項三">選項三</option>
+                        </select> -->
+                        <div class="form_grp">
+                            <label for="mustSameAsId">搜尋</label>
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S">
+                            <input name="" type="submit" title="查詢" value="網站查詢" />
+                        </div>
+                    </form>
+                </div>
+                <!-- Search End -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">新進童書</a></li>
+                        <li><a href="#">我要找書</a></li>
+                        <li><a href="#">活動資訊</a></li>
+                        <li><a href="#">常見問答</a></li>
+                        <li><a href="#">認識圖書館</a></li>
+
+                    </ul>
+                </nav>
+                <!-- menu End -->
+                <!-- 手機版首頁menu Start -->
+                <nav class="mobile-mpmenu">
+                    <ul>
+                        <li><a href="#">新進童書</a></li>
+                        <li><a href="#">我要找書</a></li>
+                        <li><a href="#">活動資訊</a></li>
+                        <li><a href="#">常見問答</a></li>
+                        <li><a href="#">認識圖書館</a></li>
+
+                    </ul>
+                </nav>
+                <!-- 手機版首頁menu End -->
+
+                <!-- 讀者登入 -->
+                <div class="login">
+                    <button class="login-btn" onclick="openRight()">讀者登入</button>
+                    <div class="login-animate-right" style="display:none;right:0;" id="rightlogin">
+                        <button onclick="closeRight()" class="close-btn">&times;</button>
+                        <form action="">
+                            <div class="form_inline">
+                                <div class="form_grp">
+                                    <label for="username">帳號：</label>
+                                    <input name="username" type="text" placeholder="請輸入帳號">
+                                </div>
+                                <div class="form_grp">
+                                    <label for="password">密碼：</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="check_grp">
+                                    <label><input type="checkbox">記住帳號</label>
+                                </div>
+                                <div class="btn_grp">
+                                    <buttom type="button" class="btn">登入</buttom>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 讀者登入 end-->
+                <!--讀者已登入狀態-->
+                <!-- <div class="login">
+                    <button class="login-btn" onclick="openRight()">讀者登出</button>
+                    <div class="login-animate-right" style="display:none;right:0;" id="rightMenu">
+                        <button onclick="closeRight()" class="close-btn">&times;</button>
+                        <form id="memberlogin" action="" method="post" class="form_inline">
+                            <p class="reader">
+                                歡迎，<span class="reader_name">凌網測試讀者</span>
+                            </p>
+                            <ul>
+                                <li class="reader_borrow">借閱中<span>0</span></li>
+                                <li class="reader_overdue">逾期未歸<span>0</span></li>
+                                <li class="reader_violation">違規天數<span>0</span></li>
+                                <li class="reader_booked">預約<span>0</span></li>
+                                <li class="reader_arrival">已到館<span>0</span></li>
+                            </ul>
+                            <div class="btn_grp">
+                                <button class="btn" onclick="member()">個人書房</button>
+                                <a class="btn" id="btn_logout" title="登出" href="sp?xdUrl=/wSite/MemberManager/SSOLogout.jsp&amp;mp=1">登出</a>
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+
+                <!--讀者已登入狀態 end-->
+                <script>
+                  function openRight() {
+                      document.getElementById("rightlogin").style.display = "block";
+                  }
+
+                  function closeRight() {
+                      document.getElementById("rightlogin").style.display = "none";
+                  }
+              </script>
+
+
+              <!-- bird 裝飾圖片 -->
+              <div class="birdbox">
+                <div class="bird1"><img src="images/bird.png" alt=""></div>
+                <div class="bird2"><img src="images/bird2.png" alt=""></div>
+                <div class="bird3"><img src="images/bird3.png" alt=""></div>
+                <div class="bird4"><img src="images/bird4.png" alt=""></div>
+                <div class="bird5"><img src="images/bird5.gif" alt=""></div>
+                <div class="bird6"><img src="images/bird6.gif" alt=""></div>
+                <div class="bird7"><img src="images/bird7.gif" alt=""></div>
+            </div>
+            <!-- bird 裝飾圖片 end-->
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+        <!-- //// class 都可以隨意命名 !!! ///// -->
+        <section>
+            <div class="container">
+                <!-- function2功能區塊 -->
+                <div class="function2">
+                    <ul>
+                      <li class="fb"><a href="#">FB粉絲團</a></li>
+                      <li class="se"><a href="#">館藏查詢</a></li>
+                      <li class="ca"><a href="#">行事曆</a></li>
+                      <li class="qa"><a href="#">常見問題</a></li>
+                  </ul>
+              </div>
+              <!-- function eng -->
+          </div>
+
+      </section>
+  </div>
+
+  <!-- footer Start-->
+  <footer>
+    <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+
+        <div class="col-12">
+            <div class="col">
+                <div class="footer_info">
+                    <p>嘉義市政府文化局圖書館<br>
+                        地址 60081 嘉義市忠孝路275號<br>
+                        電話 (05)2788225
+                    </p>
+                    <p>
+                        <span class="counter">今日瀏覽人次：<em>11,205</em></span>
+                        <span class="counter">本月瀏覽人次：<em>22,666</em></span>
+                    </p>
+                    <p>
+                        <span class="counter">年度瀏覽人次：<em>300,456</em></span>
+                        <span class="counter">累計瀏覽人次：<em>2,022,3336</em></span>
+                    </p>
+                    <p>
+                        <span class="update">更新日期：<em>2022/07/01</em></span>
+                    </p>
+                    <p>建議瀏覽器 IE10.0以上、Firefox、Chrome(螢幕設定最佳顯示效果為1280*1024)</p>
+                </div>
+                <div class="footer_icon">
+                    <a target="_blank" href="javascript:;" title="另開視窗">
+                        <img src="images/basic/accessibility.jpg" alt="">
+                    </a>
+                    <a target="_blank" href="javascript:;" title="另開視窗">
+                        <img src="images/basic/egov.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="footer_link">
+        <ul>
+            <li><a href="javascript:;">隱私權政策</a></li>
+            <li><a href="javascript:;">網站安全政策</a></li>
+            <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+        </ul>
+        <p>版權所有 ©2021 All Rights Reserved</p>
+    </div> 
+</footer>
+<!-- footer End -->
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<!-- JQ -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- 外掛 plugin js -->
+<script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+<script src="vendor/slick/slick.js "></script><!-- slick -->
+<script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+<script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+<script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.js"></script>
+
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+<!-- WOW -->
+<script src="vendor/wow/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script>
+    $(function() {
+        $('.calendar').pignoseCalendar({
+            lang: 'ch',
+            disabledWeekdays: [1],
+            disabledDates: [
+            '2019-11-30',
+            ],
+            scheduleOptions: {
+                colors: {
+                    event: '#f1f1f1',
+                }
+            },
+            schedules: [{
+                name: 'event',
+                date: '2019-11-16'
+            }, {
+                name: 'event',
+                date: '2019-11-23'
+            }],
+
+        });
+    });
+</script>
+
+</body>
+
+</html>

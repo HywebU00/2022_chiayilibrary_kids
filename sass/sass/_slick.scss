@@ -1,0 +1,1168 @@
+// 共用slick的a focus
+.slick-slide {
+    a {
+        &:focus {
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 99;
+                @include box-shadow(0px 0px 0px 1px $aHover inset);
+            }
+        }
+    }
+}
+// arrow
+.slick-prev, .slick-next {
+    // transition: .3s ease-out;
+    // width: 55px;
+    // height: 18px;
+    // background-size:90%;
+    &:hover {
+        border: none !important;
+        outline:none;
+        box-shadow: 0px 0px 0px 0px $aHover inset;
+        // background-size:100%;
+    }
+    &:focus {
+        border: none !important;
+        outline:none;
+        box-shadow: 0px 0px 0px 2px $aHover inset;
+        // background-size:100%;
+    }
+}
+
+// slick._scss
+// 首頁大圖輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 2em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(4, 1.5); //PC版比例
+        // @include screen('mobile') {
+        //      @include aspect-ratio(5, 1.5);
+        // }
+    }
+    .slick-prev, .slick-next{
+        background-color:rgba($primaryColor, .8);
+        background-size:25px 25px;
+        &:focus{
+          box-shadow: 0px 0px 0px 2px $secondaryColor inset;
+      }
+  }
+  .slick-prev {
+    background-image: url(../vendor/slick/icon_arrow_left.png);
+    @include screen('mobile') {
+        top: 40%;
+        left: -10px;
+    }
+}
+.slick-next {
+    background-image: url(../vendor/slick/icon_arrow_right.png);
+    @include screen('mobile') {
+        top: 40%;
+        right: -10px;
+    }
+}
+.slick-dots{
+    text-align: left;
+    padding:0 5px;
+    li{
+        width: 20px;
+        height: 20px;
+        margin:0 1px;
+        button{
+            width: 20px;
+            height: 20px;
+            &:before{
+                width: 10px;
+                height: 10px;
+                border-radius: 0;
+                top:5px;
+                left:5px;
+            }
+        }
+    }
+}
+}
+
+// slick._scss
+// adSlider
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+    @include screen('mobile') {
+        @include gutter();
+    }
+    .slick-prev {
+        left: -10px;
+        top:50%;
+        @media screen and (max-width: 1100px){
+            left:10px;
+        }
+        @include screen('mobile'){
+            left:0;
+        }
+    }
+    .slick-next {
+        right: -10px;
+        top:50%;
+        @media screen and (max-width: 1100px){
+            right:10px;
+        }
+        @include screen('mobile'){
+            right:0;
+        }
+    }
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+        background: rgba(#fff, 0);
+        a {
+            display: block;
+            img {
+                margin: 0 auto;
+                object-fit: contain;
+            }
+        }
+    }
+}
+.bookSlider{
+    padding:0 60px;
+    .img-container{
+        // width: 200px;
+        // height: 240px;
+        // background: #fff;
+        // border:1px solid #f7f7f7;
+        @include aspect-ratio(4,4);
+        margin:0 auto;
+        img{
+            padding: 5px;
+        }
+    }
+    .slick-prev, .slick-next{
+        background-color: rgba(255,255,255,0);
+    }
+    .slick-prev {
+        left: -10px;
+        top:35%;
+    }
+    .slick-next {
+        right: -10px;
+        top:35%;
+    }
+}
+.cp_slider{
+    .slick-prev {
+        left: -10px;
+        top:50%;
+    }
+    .slick-next {
+        right: -10px;
+        top:50%;
+    }
+    .slick-dots{
+        bottom: -20px;
+    }
+}
+// slick dots
+.slick-dots {
+    @include screen("mobile"){
+        bottom: 10px;
+    }
+    li {
+        width: 12px;
+        height: 12px;
+        margin:0 6px;
+        button {
+            width: 12px;
+            height: 12px;
+            &:hover,
+            &:focus {
+                border: none !important;
+                &:before {
+                    background: adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                    box-shadow: 0px 0px 0px 1px adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                }
+            }
+            &:before {
+                background: rgba(0,0,0,.5);
+                width: 10px;
+                height: 10px;
+                opacity: .8;
+                border-radius: 0%;
+                @include screen("mobile"){
+                    background: rgba(0,0,0,.5);
+                }
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    background: $aColor;
+                }
+                &:hover,
+                &:focus {
+                    &:before {
+                        opacity: 1;
+                        color: black;
+                        background: adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                    }
+                }
+            }
+        }
+    }
+}
+//  slick燈箱
+.lightbox_slider {
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 15px 0px;
+        margin: 0.5em 0px 1.2em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    background: #fff;
+    padding: 1em 0;
+    clear: both;
+    .cp_slider {
+        @include gutter;
+    }
+    .img-container {
+        margin: 0px 15px;
+        @include aspect-ratio(4, 3);
+        overflow: hidden;
+        img {
+            object-fit: contain;
+        }
+    }
+    .caption {
+        padding: .5em !important;
+        position: absolute;
+        background: rgba(0, 0, 0, .75) !important;
+        color: #FFF;
+        bottom: -2em !important;
+        left: 0;
+        font-size: .938em !important;
+        height: 2em !important;
+        line-height: 1 !important;
+        width: 100%;
+        @include text-overflow;
+        transition: .3s ease-out;
+    }
+    // dots
+    .slick-dots {
+        bottom: -30px !important;
+        @include screen('mobile') {
+            bottom: -40px !important;
+            padding: 0;
+        }
+        li {
+            width: 10px;
+            height: 10px;
+            margin: 0 10px;
+        }
+    }
+    //Arrows
+    .slick-prev {
+        left: -1 * $grid-gutter-width/2;
+    }
+    .slick-next {
+        right: -1 * $grid-gutter-width/2;
+    }
+    a {
+        color: #555;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:hover,
+        &:focus {
+            .caption {
+                bottom: 0 !important;
+            }
+        }
+    }
+}
+/*  slick-lightbox  */
+.slick-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: black;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    .slick-loading .slick-list {
+        background-color: transparent
+    }
+    .slick-prev {
+        left: 5px;
+        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+        background-size: 80%;
+        z-index: 9;
+    }
+    .slick-next {
+        right: 5px;
+        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+        background-size: 80%;
+        z-index: 9;
+    }
+}
+.slick-lightbox-hide {
+    opacity: 0;
+    &.slick-lightbox-ie {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0)
+    }
+}
+.slick-lightbox-hide-init {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+    &.slick-lightbox-ie {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0)
+    }
+}
+.slick-lightbox-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.slick-lightbox-slick-item {
+    text-align: center;
+    overflow: hidden;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+}
+.slick-caption-bottom .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
+    display: block;
+    text-align: center;
+}
+.slick-lightbox-slick-item-inner {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
+    max-height: 90%;
+}
+.slick-lightbox-slick-img {
+    margin: 0 auto 1em;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+.slick-lightbox-slick-caption {
+    margin: 20px 0 0;
+    color: white;
+    @extend %clearfix;
+}
+.slick-lightbox-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block;
+    height: 45px;
+    width: 45px;
+    line-height: 0;
+    font-size: 0em;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    padding: 0;
+    border: none;
+    min-width: auto;
+    &:focus {
+        outline: none;
+    }
+    &:before {
+        content: "";
+        height: 6px;
+        width: 32px;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 18px;
+        background: #DDD;
+        left: 6px;
+        transition: .3s all ease-out;
+    }
+    &:after {
+        content: "";
+        height: 6px;
+        width: 32px;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 18px;
+        background: #DDD;
+        left: 6px;
+        transition: .3s all ease-out;
+    }
+    &:hover,
+    &:focus {
+        background: none;
+        margin-top: 0;
+        border: none;
+        &:before,
+        &:after {
+            background: #FFF;
+        }
+    }
+}
+//  同步輪播
+.Syncing_slider {
+    @extend %clearfix;
+    position: relative;
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 15px 0px;
+        margin: 0.5em 0px 1.2em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    .slick-slide {
+        position: relative;
+    }
+    .controls {
+        text-align: center;
+        font-weight: bold;
+        max-width: 100px;
+        color: #FFF;
+        padding: .2em .5em;
+        margin: 0px auto;
+        background: $primaryColor;
+        border-radius: 20px;
+        text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
+    }
+    .img-container {
+        @include aspect-ratio(16, 9);
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+        }
+    }
+    p {
+        position: absolute;
+        background: RGBA(0, 0, 0, .55);
+        text-align: center;
+        color: #FFF;
+        padding: .5em;
+        @include box-sizing;
+        @include text-overflow;
+        bottom: 0px;
+        width: 100%;
+        height: 2.5em;
+        line-height: 1.5em;
+        margin: 0px;
+        z-index: 2;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+        background-size: 80%;
+        @include screen('mobile') {
+            right: .5em;
+        }
+    }
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+        background-size: 80%;
+        @include screen('mobile') {
+            left: .5em;
+        }
+    }
+    .Slider-for {
+        width: 80%;
+        min-width: 260px;
+        max-width: 800px;
+        margin: 1em auto;
+        position: relative;
+    }
+    .Slider-nav {
+        width: 80%;
+        min-width: 260px;
+        max-width: 800px;
+        margin: 1em auto;
+        position: relative;
+        .img-container {
+            p {
+                display: none;
+            }
+        }
+        /*正在動作的縮圖*/
+        .slick-slide.slick-current {
+            opacity: 1;
+        }
+        position: relative;
+    }
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+
+.mpSlider2 {
+  width: 100%;
+  padding: 0;
+  .slick-prev, .slick-next{
+    display: none!important;
+}
+.slick-slide {
+    overflow: hidden;
+    &.img-container {
+      width: 100%;
+      height: 100%;
+    //   a {
+    //     position: absolute;
+    // }
+}
+
+div{
+ @include aspect-ratio(4,2.8); 
+}
+
+a{
+    position: relative;
+    display: block;
+    .overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .6);
+        overflow: hidden;
+        width: 100%;
+        height: 3.5em;
+        transition: .5s ease;
+        z-index: 999;
+        &:hover, &:focus{
+          height: 13em;
+          @include screen('mobile') {
+            height: 100%;
+        } 
+        p{
+          color:#000; 
+          position: relative; 
+      } 
+  }
+  .unit{
+    border: solid 2px #c00;
+    color:#000;
+    z-index: 999;
+}
+}
+}
+
+
+
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+  transition: transform 10s ease-out 0.4s;
+  transform: scale(1);
+  z-index: 1;
+}
+&.slick-current {
+  img {
+    // transform: scale(1.1);
+    // animation-name: imgdynamic;
+    // animation-duration: 5s;
+}
+// a {
+//     .wordcontent {
+//       .bigword {
+//         animation-name: worddynamic;
+//         animation-duration: 5s;
+//     }
+//     .middleword,
+//     .smallword {
+//         animation-name: worddynamics;
+//         animation-duration: 5s;
+//         animation-timing-function: ease-in;
+//     }
+// }
+// }
+}
+&.slick-current.start img {
+    transition: transform 0s 0s;
+    transform: scale(1);
+}
+@keyframes imgdynamic {
+  0% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.05);
+    
+}
+}
+.wordcontent {
+  position: absolute;
+  z-index: 2;
+  font-size: 1.5em;
+  color: #fff;
+  left: 100px;
+  top: 125px;
+  text-shadow: rgb(46, 46, 46) 0px 4px 5px;
+  &.align_center {
+    top: 35%;
+}
+&.align_bottom {
+    top: auto;
+    bottom: 40px;
+}
+.bigword,
+.middleword,
+.smallword {
+    opacity: 0;
+}
+.bigword {
+    font-size: 3.5em;
+    margin-bottom: 0.8em;
+    font-family: NotoSansCJKtc-Regular, jf-jinxuan-medium;
+}
+.middleword {
+    font-size: 1.25em;
+    margin-bottom: 0.8em;
+    font-family: NotoSansCJKtc-Regular, jf-jinxuan-medium;
+}
+.smallword {
+    font-size: 0.938em;
+    margin-bottom: 0.8em;
+        // font-family: jf-jinxuan-bold; //金萱 七分糖
+        font-family: jf-jinxuan-medium; //金萱 半分糖
+    }
+    @keyframes worddynamic {
+        0% {
+          transform: translateX(70px);
+          opacity: 0;
+      }
+      25% {
+          transform: translateX(0px);
+          opacity: 1;
+      }
+      95% {
+          transform: translateX(0px);
+          opacity: 1;
+      }
+      100% {
+          transform: translateX(-70px);
+          opacity: 0;
+      }
+  }
+  @keyframes worddynamics {
+    0% {
+      transform: translateX(-70px);
+      opacity: 0;
+  }
+  25% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+  95% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(70px);
+      opacity: 0;
+  }
+}
+}
+}
+  // 點點
+  .slick-dots {
+    justify-content: flex-start;
+    left: -12px;
+    bottom:-30px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    li {
+      /* 兩點的距離 */
+      margin: 0 12px;
+      button {
+        /* 點的顏色 */
+        background: #ccc;
+        opacity: 1;
+        width: 30px;
+        height: 2px;
+        position: relative;
+        &:hover,
+        &:focus {
+          opacity: 1;
+          /* 點hover的顏色 */
+      }
+
+      &:focus {
+          opacity: 1;
+          /* 點focus的顏色 */
+          background: $secondaryColor;
+          // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+      }
+      &:before {
+        width: 0;
+        height: 0;
+    }
+}
+&.slick-active {
+    button {
+      opacity: 1;
+      
+          /* 點 active 的顏色 */
+          background: #ccc;
+          &:before {
+            content: "";
+            width: 100px;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            max-height: 100%;
+            max-width: 100%;
+            animation-name: dots;
+            animation-duration: 5s;
+            background:#707070 ;
+        }
+        &:hover {
+            /* 點 active  hover的顏色 */
+            background: $secondaryColor;
+            height: 2px;
+            border-radius: none!important;
+
+            &:before {
+                width: 0;
+                height: 0;
+            }
+        }
+        &:focus {
+            /* 點 active  focus的顏色 */
+            &:before {
+              @keyframes dots {
+                from {
+                    width: 0;
+                }
+                to {
+                  width: 100px;
+              }
+          }
+          &:before {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+}
+}
+}
+
+}
+}
+
+
+//mpSlider3
+
+.mpSlider3{
+    position: relative;
+    z-index: 2;
+    .img-container{
+        // border:solid 1px #000;
+    }
+    a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &:focus{
+            box-shadow: none;
+            img{
+              border: solid 2px $aHover;
+          }
+      }
+
+  }
+  .slick span {
+      display: block;
+      // background: #eee;
+      color: #fff;
+      font-size: 36px;
+      @include aspect-ratio(4,2.5);
+
+
+  // height: 100px;
+  // line-height: 200%;
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  // border: solid 1px rgb(145, 195, 0);
+  
+  transform: translate(0, 0) scale(.4);
+  transition: all .4s ease;
+  opacity: .5;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+}
+
+.slick-slide {
+  // border: solid 1px #2dc37f;
+}
+
+.slick-slide.lt2 span {
+  transform: translate(10%, 0) scale(.6);
+}
+.slick-slide.lt1{
+    a{
+        margin-left: -80%;
+        margin-top: 57.5%;
+        width: 120%;
+    }
+    span {
+      opacity: 1;
+      transform: translate(0, 0) scale(.8);
+  }
+}
+
+.slick-slide.gt1 {
+    a{
+        margin-top: 0;
+        width: 120%;
+    }
+    span {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        right:-30%;
+        display: inline-block;
+    } 
+}
+
+.slick-slide.gt2 span {
+  transform: translate(-10%, 0) scale(.6);
+}
+.slick-slide.slick-center{
+
+    a{
+        width: 200%;
+        margin-left: -68%;
+
+    }
+    span {
+      z-index: 1;
+      transform: scale(1);
+      opacity: 1;
+      color: #e67e22;
+  }
+}
+
+// 點點
+.slick-dots {
+    justify-content: flex-start;
+    left: 6%;
+    top:30px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    @include screen('tablet') {
+       left: 4%;
+       top:30px; 
+   }
+   @include screen('mobile') {
+    left: 1%;
+    top:20px;  
+}
+li {
+      /* 兩點的距離 */
+      margin: 0 12px;
+      position: absolute;
+      left:30px;
+      top:0;
+
+      button {
+        /* 點的顏色 */
+        background: #ccc;
+        opacity: 1;
+        height: 176px;
+        width: 2px;
+        position: relative;
+        @include screen('mobile') {
+            height: 90px; 
+            width: 1px;
+        }
+        &:hover,
+        &:focus {
+          opacity: 1;
+          /* 點hover的顏色 */
+      }
+
+      &:focus {
+          opacity: 1;
+          /* 點focus的顏色 */
+          background: $secondaryColor;
+          // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+      }
+      &:before {
+        width: 0;
+        height: 0;
+    }
+}
+&.slick-active {
+    z-index: 999;
+    button {
+      &:before {
+        content: "";
+        height: 176px;
+        width: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-height: 100%;
+        max-width: 100%;
+        animation-name: dots;
+        animation-duration: 5s;
+        background:#707070 ;
+        @include screen('mobile') {
+            height: 90px;
+            width: 1px;
+        }
+    }
+    &:hover {
+        background: $secondaryColor;
+        height: 2px;
+        border-radius: none!important;
+
+        &:before {
+            width: 0;
+            height: 0;
+        }
+    }
+    &:focus {
+            /* 點 active  focus的顏色 */
+            &:before {
+                @keyframes dots {
+                    from {
+                        height: 0;
+                    }
+                    to {
+                        height: 176px;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+}
+
+}
+}
+
+
+// .slick-prev,
+// .slick-next{
+//   position: absolute;
+//   top: 50%;
+//   appearance: none;
+//   margin-top: -10px;
+//   padding: 0;
+//   border: 0;
+//   background: none;
+//   cursor: pointer;
+//   color: transparent;
+//   outline: none;
+//   z-index: 100;
+// }
+
+// .slick-prev {
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 15px 15px 15px 0;
+//   border-color: transparent #007bff transparent transparent;
+//   left: 0;
+// }
+// .slick-next {
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 15px 0 15px 15px;
+//   border-color: transparent transparent transparent #007bff;
+//   right: 0;
+// }
+.slick-arrow{
+    display: none!important;
+}
+
+
+}
+
+
+//activity_slider
+.activity_slider {
+    // @include gutter;
+    .img-container {
+        margin: 0px;
+        @include aspect-ratio(4, 3);
+        background:#fff;
+        overflow: hidden;
+        img {
+            object-fit: fill;
+        }
+    }
+    .caption {
+        padding: .5em !important;
+        position: absolute;
+        background: rgba(0, 0, 0, .75) !important;
+        color: #FFF;
+        bottom: -6em !important;
+        left: 0;
+        font-size: .938em !important;
+        height: 6em !important;
+        line-height: 1 !important;
+        width: 100%;
+        @include text-overflow;
+        transition: .3s ease-out;
+        h3{
+            margin: 0;
+            padding: 0 10px;
+            font-size: 1em;
+            white-space: normal;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .unit{
+            font-size: .938em;
+            text-align: left;
+            padding: 5px 10px;
+        }
+        .date{
+            position: absolute;
+            right: 15px;
+            top:10px;
+            font-size: .875em;
+        }
+    }
+    // dots
+    .slick-dots {
+        bottom: -30px !important;
+        text-align: left;
+        padding: 0;
+
+        li {
+            width: 30px;
+            height: 2px;
+            margin:0 6px 0 0;
+            button {
+                width: 30px;
+                height: 2px;
+                background:#fff;
+                &:hover,
+                &:focus {
+                    border: none !important;
+                    &:before {
+                        background: adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                        // box-shadow: 0px 0px 0px 1px adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                    }
+                }
+                &:before {
+                    background: rgba(0,0,0,.2);
+                    width: 30px;
+                    height: 2px;
+                    opacity: .8;
+                    border-radius: 0%;
+                    @include screen("mobile"){
+                        background: rgba(0,0,0,.2);
+                    }
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        background: rgba(0,0,0,.8);
+                    }
+                    &:hover,
+                    &:focus {
+                        &:before {
+                            opacity: 1;
+                            color: black;
+                            background: adjust_hue(saturate(lighten($aColor, 7), 18), -17);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //Arrows
+    .slick-prev {
+        // left: -1 * $grid-gutter-width/2;
+        left:0;
+        display: none!important;
+
+    }
+    .slick-next {
+        // right: -1 * $grid-gutter-width/2;
+        right: 0;
+        display: none!important;
+    }
+    a {
+        color: #555;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:hover,
+        &:focus {
+            .caption {
+                bottom: 0 !important;
+            }
+        }
+    }
+}

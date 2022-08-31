@@ -1,0 +1,28 @@
+<svg width="111" height="108" viewBox="0 0 111 108" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_514_200)">
+<rect x="4.22339" y="8.25122" width="95" height="92" transform="rotate(-4.92896 4.22339 8.25122)" fill="url(#pattern0)"/>
+<path d="M52.4264 52.5333C52.4264 52.5333 56.1236 41.284 54.9827 32.7104C53.8526 24.1458 42.6532 14.9741 40.1547 19.9873C37.6562 25.0005 40.8627 28.1969 40.8627 28.1969C40.8627 28.1969 36.6589 25.8895 36.155 30.8712C35.6603 35.8421 42.6246 56.3094 52.4264 52.5333Z" fill="#FAA149"/>
+<path d="M49.3574 50.9311C49.3574 50.9311 46.776 31.8222 34.8885 25.3798C23.001 18.9373 20.4125 27.5616 28.1649 32.4938C20.3002 35.5709 25.5611 42.4543 30.8779 40.7914C25.2508 45.1409 29.9078 49.6776 33.5453 48.5609C28.529 52.1954 35.7343 55.4383 39.5386 53.1128C34.9704 55.7752 25.1658 51.9534 22.99 54.5399C20.8142 57.1265 25.8051 59.3659 25.8051 59.3659C25.8051 59.3659 22.7907 60.0274 24.6589 63.0681C26.5171 66.1097 46.2217 68.8066 58.4095 61.6229C70.5874 54.44 69.9544 43.1426 64.9866 41.9852C58.3176 40.4224 56.2419 50.3374 49.3574 50.9311Z" fill="url(#paint0_linear_514_200)"/>
+<path d="M68.0616 45.4036L72.047 46.5755L68.2368 48.8312C68.2467 48.8304 66.1579 46.722 68.0616 45.4036Z" fill="#172232"/>
+</g>
+<defs>
+<filter id="filter0_d_514_200" x="0.223389" y="0.0887451" width="110.553" height="107.822" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_514_200"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_514_200" result="shape"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_514_200"/>
+</pattern>
+<linearGradient id="paint0_linear_514_200" x1="33.1683" y1="-31.0158" x2="86.4424" y2="328.347" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FED67E"/>
+<stop offset="1" stop-color="#FA992E"/>
+</linearGradient>
+<image id="image0_514_200" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABdCAYAAABafGNLAAAACXBIWXMAAAsSAAALEgHS3X78AAAA"/>
+</defs>
+</svg>

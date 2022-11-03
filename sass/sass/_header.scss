@@ -442,32 +442,32 @@
 }
 }
 // header fix
-.header.fixed {
-    position: fixed;
-    width: 100%;
-    right: 0;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
-    background: rgba(0, 0, 0, .75);
-    z-index: 999;
-    @include screen('mobile') {
-        background: #FFF;
-    }
-    .menu {
-        margin:0 auto;
-        >ul {
-            >li {
-                >a {
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
+// .header.fixed {
+//     position: fixed;
+//     width: 100%;
+//     right: 0;
+//     top: 0;
+//     box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+//     background: rgba(0, 0, 0, .75);
+//     z-index: 999;
+//     @include screen('mobile') {
+//         background: #FFF;
+//     }
+//     .menu {
+//         margin:0 auto;
+//         >ul {
+//             >li {
+//                 >a {
+//                     color: #FFF;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 .mp{
     .header{
-        min-height: 1110px;
+        min-height: 900px;
         @include screen('mobile') {
             min-height: 600px;
         }

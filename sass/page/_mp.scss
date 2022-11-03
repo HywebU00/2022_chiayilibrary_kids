@@ -250,7 +250,7 @@ section {
     position: fixed;
     right: 0;
     // left: calc(100% - 45px);
-    top: 3.2em;
+    top: 1.8em;
     z-index: 9999;
     @include screen('mobile') {
         top: 10px;
@@ -263,7 +263,7 @@ section {
         width: 2.5em;
         min-width: 2.5em;
         min-height: 7em;
-        font-size: 1.35em;
+        font-size: 1.25em;
         white-space:pre-wrap!important;
         float: left;
         border: solid 1px $primaryColor;
@@ -312,14 +312,14 @@ section {
         right:0;
         top:0;
         &:hover{
-         background: darken($secondaryColor,15); 
-     }
- }
- .login-animate-right{
+           background: darken($secondaryColor,15); 
+       }
+   }
+   .login-animate-right{
     width: 300px;
     min-height: 5em;
     padding:2.5em 1em 1em;
-    margin-left: 3.8em;
+    margin-left: 3.6em;
     background: rgba(0, 0, 0, 1);
     color:#fff;
     font-size: .875em;
@@ -438,14 +438,14 @@ ul{
 }
 .birdbox2{
     @include screen('mobile') {
-       .bird1, .bird2, .bird3, .bird4{
+     .bird1, .bird2, .bird3, .bird4{
         display: none;
     }
 }
 }
 .bird1{
     position: absolute;
-    top:380px;
+    top:280px;
     left:8%;
     animation-name: nbird1;
     animation-duration: 3s;
@@ -454,31 +454,31 @@ ul{
 
     @keyframes nbird1 {
         0% {
-            top:380px;
+            top:280px;
             left:8%;
         }
         50% {
-            top:360px;
+            top:260px;
             left:9%;
         }
         100% {
-            top:380px;
+            top:280px;
             left:8%;
         }
     }
     @include screen('tablet') {
         @keyframes nbird1 {
             0% {
-                top:380px;
-                left:-8%;
+                top:280px;
+                left:-6%;
             }
             50% {
-                top:360px;
-                left:-7%;
+                top:260px;
+                left:-5%;
             }
             100% {
-                top:380px;
-                left:-8%;
+                top:280px;
+                left:-6%;
             }
         }
     }
@@ -504,7 +504,7 @@ ul{
 }
 .bird2{
     position: absolute;
-    top:545px;
+    top:315px;
     right:9.5%;
     animation-name: nbird2;
     animation-duration: 5s;
@@ -547,7 +547,7 @@ ul{
 }
 .bird3{
     position: absolute;
-    top:857px;
+    top:607px;
     left:3.6%;
     animation-name: nbird3;
     animation-duration: 3s;
@@ -555,31 +555,31 @@ ul{
     animation-timing-function: ease-in;
     @keyframes nbird3 {
         0% {
-            top:857px;
+            top:607px;
             left:3.6%;
         }
         50% {
-            top:860px;
+            top:600px;
             left:5%;
         }
         100% {
-            top:857px;
+            top:607px;
             left:3.6%;
         }
     }
     @include screen('tablet') {
         @keyframes nbird3 {
             0% {
-                top:857px;
-                left:-3.6%;
+                top:607px;
+                left:-2.6%;
             }
             50% {
-                top:860px;
-                left:-1%;
+                top:600px;
+                left:0%;
             }
             100% {
-                top:857px;
-                left:-3.6%;
+                top:607px;
+                left:-2.6%;
             }
         }
     }
@@ -605,7 +605,7 @@ ul{
 }
 .bird4{
     position: absolute;
-    top:895px;
+    top:605px;
     right:3.6%;
     animation-name: nbird4;
     animation-duration: 3s;
@@ -623,27 +623,27 @@ ul{
         }
     }
     @include screen('tablet') {
-       @keyframes nbird4 {
+     @keyframes nbird4 {
         0% {
             transform:scale(0.8) rotate(0deg);
-            top:895px;
+            top:605px;
             right:-1%;
         }
         50% {
             transform:scale(0.8) rotate(-5deg);
-            top:895px;
+            top:605px;
             right:-1%;
         }
         100% {
             transform:scale(0.8) rotate(0deg);
-            top:895px;
+            top:605px;
             right:-1%;
         }
     }
 
 }
 @include screen('mobile') {
-   @keyframes nbird4 {
+ @keyframes nbird4 {
     0% {
         transform:scale(0.6) rotate(0deg);
         top:490px;
@@ -664,7 +664,7 @@ ul{
 }
 .bird5{
     position: absolute;
-    top:220px;
+    top:160px;
     left:14.3%;
     animation-name: nbird5;
     animation-duration: 5s;
@@ -675,15 +675,15 @@ ul{
     }
     @keyframes nbird5 {
         0% {
-            top: 220px;
+            top: 160px;
             left:14.3%;
         }
         50% {
-            top: 225px;
+            top: 165px;
             left:15%;
         }
         100% {
-            top: 220px;
+            top: 160px;
             left:14.3%;
         }
     }
@@ -709,31 +709,31 @@ ul{
 }
 .bird6{
     position: absolute;
-    top:180px;
+    top:130px;
     left:66.5%;
     animation-name: nbird6;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     img{
-        width: 54%;
+        width: 50%;
     }
     @keyframes nbird6 {
         0% {
-            top:180px;
+            top:130px;
             left:66.5%;
         }
         50% {
-            top:170px;
+            top:120px;
             left:67%;
         }
         100% {
-            top:180px;
+            top:130px;
             left:66.5%;
         }
     }
     @include screen('mobile') {
-       img{
+     img{
         width: 30px;
     }
     @keyframes nbird6 {
@@ -754,7 +754,7 @@ ul{
 }
 .bird7{
     position: absolute;
-    top:208px;
+    top:150px;
     left:61%;
     animation-name: nbird7;
     animation-duration: 5s;
@@ -765,15 +765,15 @@ ul{
     }
     @keyframes nbird7 {
         0% {
-            top:208px;
+            top:150px;
             left:61%;
         }
         50% {
-            top:218px;
+            top:148px;
             left:62%;
         }
         100% {
-            top:208px;
+            top:150px;
             left:61%;
         }
     }

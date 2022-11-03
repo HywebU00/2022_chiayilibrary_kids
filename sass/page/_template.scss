@@ -19,7 +19,7 @@ body {
     width: 100%;
     margin: 0px auto;
     // position:relative;
-    background:#b9ddbf url('../images/body_bg.png')no-repeat center top;
+    background:#b9ddbf url('../images/body_bg2.png')no-repeat center top;
 
     // min-height: 1100px;
     @include screen('mobile') {
@@ -78,8 +78,8 @@ body {
         @include gutter;
     }
     .news, .recent_activities{
-       padding-left: 3.5em;
-       overflow: hidden;
+     padding-left: 3.5em;
+     overflow: hidden;
        //background-color: #fff;
        @include screen('mobile'){
         padding-left:15px;

@@ -12,19 +12,23 @@ footer {
         // }
         max-width:100%;
     }
-    .accesskey{
-        color:#fff;
-        margin-top: -1em;
+    .col{
+       max-width:1200px;
+       margin: 0 auto;
+   }
+   .accesskey{
+    color:#fff;
+    margin-top: -1em;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    &:hover,
+    &:focus {
+        color: darken($primaryColor, 10);
     }
-    a {
-        text-decoration: none;
-        color: #fff;
-        &:hover,
-        &:focus {
-            color: darken($primaryColor, 10);
-        }
-    }
-    .footer_logo {
+}
+.footer_logo {
         // @include make-xs-column(8);
         // @include make-sm-column(3);
         // @include make-md-column(3);

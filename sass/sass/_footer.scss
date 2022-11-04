@@ -13,10 +13,11 @@ footer {
         max-width:100%;
     }
     .col{
-       max-width:1200px;
-       margin: 0 auto;
-   }
-   .accesskey{
+     max-width:1200px;
+     margin: 0 auto;
+     position: relative;
+ }
+ .accesskey{
     color:#fff;
     margin-top: -1em;
 }
@@ -50,10 +51,10 @@ a {
         // .Copyright{
         // }
         @include screen('tablet') {
-           background: url('../images/logo2.png')no-repeat left top;
-           background-size: 180px auto; 
-       }
-       @include screen('mobile') {
+         background: url('../images/logo2.png')no-repeat left top;
+         background-size: 180px auto; 
+     }
+     @include screen('mobile') {
         padding: 80px 0 .5em 20px;
         background: url('../images/logo2.png')no-repeat left top;
         background-size: 140px auto;

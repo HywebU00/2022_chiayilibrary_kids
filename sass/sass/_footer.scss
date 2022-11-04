@@ -6,10 +6,11 @@ footer {
     background: #fff url('../images/bg1bg.png')no-repeat left top;
     background-size: cover;
     .container {
-        @include gutter;
+        // @include gutter;
         // >div {
         //     padding-bottom: 1em;
         // }
+        max-width:100%;
     }
     .accesskey{
         color:#fff;
@@ -45,10 +46,10 @@ footer {
         // .Copyright{
         // }
         @include screen('tablet') {
-         background: url('../images/logo2.png')no-repeat left top;
-         background-size: 180px auto; 
-     }
-     @include screen('mobile') {
+           background: url('../images/logo2.png')no-repeat left top;
+           background-size: 180px auto; 
+       }
+       @include screen('mobile') {
         padding: 80px 0 .5em 20px;
         background: url('../images/logo2.png')no-repeat left top;
         background-size: 140px auto;

@@ -7,14 +7,13 @@ a.goCenter {
     padding: 0 .5em;
     height: 2em;
     line-height: 2em;
-    background: $secondaryColor;
-    color: #fff;
+    background: $focus-bg;
+    color: $focus-color;
     text-decoration: none;
     z-index: 999999999999;
     opacity: 0;
     transition: .5s;
     border-radius: 0px 0px 4px 4px;
-    color: #FFF;
     @include screen("mobile") {
         display: none;
     }

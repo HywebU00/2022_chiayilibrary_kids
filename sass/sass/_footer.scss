@@ -168,9 +168,13 @@ p{
             margin: 0;
 
             @include transition(all, .3s, ease-out);
-            &:hover,
-            &:focus {
+            &:hover {
                 color:$aHover;
+            }
+            &:focus {
+                border: dotted 2px $focus-boder;
+                background: $focus-bg;
+                color:$focus-color;
             }
         }
     }

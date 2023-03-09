@@ -50,6 +50,11 @@
                     width: 10em;
                     margin: .3em auto;
                 }
+                &:focus {
+                    border: dotted 2px $focus-boder;
+                    background: $focus-bg;
+                    color:$focus-color;
+                }
             }
             &.hasChild {
                 >a {
@@ -68,7 +73,7 @@
                     }
                 }
             }
-            &:hover, &:focus {
+            &:hover {
                 >a {
                     color: #fff;
                     background: $primaryColor;
@@ -80,6 +85,7 @@
                     // }
                 }
             }
+
         }
         ul {
             display: none;
@@ -203,6 +209,11 @@
                     width: 10em;
                     margin: .8em auto;
                 }
+                &:focus{
+                    border: dotted 2px $focus-boder;
+                    background: $focus-bg;
+                    color:$focus-color;
+                }
             }
             &.hasChild {
                 >a {
@@ -219,6 +230,11 @@
                         border-left: none;
                         margin-bottom: .2em;
                     }
+                    &:focus{
+                        border: dotted 2px $focus-boder;
+                        background: $focus-bg;
+                        color:$focus-color;
+                    }
                 }
             }
             &:hover {
@@ -233,6 +249,7 @@
                     // }
                 }
             }
+
         }
         ul {
             display: none;

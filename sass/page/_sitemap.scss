@@ -53,13 +53,18 @@ $sitemapWidth:100%/ $sitemapLength;
              font-size: 1.25em;
              font-weight: bold;
              border-bottom: 2px solid $primaryColor;
-             &:hover,
-             &:focus {
+             &:hover {
                  color: $primaryColor !important;
                  text-decoration: none;
              }
-         }
-         ul {
+             &:focus {
+                border: dotted 2px $focus-boder;
+                background: $focus-bg;
+                color:$focus-color;
+                text-decoration: none;
+            }
+        }
+        ul {
             padding-left: .5em;
             li {
              width: 100%;

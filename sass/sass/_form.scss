@@ -429,7 +429,7 @@ input[type="tel"] {
 
 button,
 input[type="button"],
-    {
+{
     @extend %btn;
     @include btn_setting($form-focus, #FFF);
 }
@@ -457,9 +457,12 @@ input[type="password"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($form-focus, 10);
-    @include box-shadow(0px 0px 0px 2px lighten($form-focus, 10));
+    // border: 1px solid lighten($form-focus, 10);
+    // @include box-shadow(0px 0px 0px 2px lighten($form-focus, 10));
     outline: none;
+    border: dotted 2px $focus-boder;
+    background: $focus-bg;
+    color:$focus-color;
 }
 
 //
@@ -481,6 +484,10 @@ select {
         color: transparent;
         text-shadow: 0 0 0 #000;
     }
+    &:focus{
+      background: $focus-bg url(../images/basic/icon_select_arrow.png) no-repeat right 2px center;
+      background-size: 16px;  
+  }
 }
 
 //---------------------------------------------reset--------//

@@ -261,9 +261,9 @@
                 border-radius: 0 .125em .125em 0;
                 float: left;
                 &:focus {
-                    box-shadow: 0px 0px 0px 3px $aHover;
-                    outline: none;
-                    border: none;
+                    // box-shadow: 0px 0px 0px 3px $aHover;
+                    // outline: none;
+                    // border: none;
                 }
                 // @include screen('mobile') {
                 //     width: 60% !important;
@@ -285,13 +285,15 @@
                 border-radius: 3px;
                 margin-left: .2em;
                 @include box-sizing;
-                &:hover,
-                &:focus {
+                &:hover {
                     opacity: 1;
                     box-shadow: 0px 0px 0px 2px $aHover inset;
                 }
                 &:focus {
-                    outline: 2px solid $secondaryColor;
+                    // outline: 2px solid $secondaryColor;
+                    border: dotted 2px $focus-boder;
+                    background: $focus-bg url("../images/search-btn-ov.png") no-repeat left 6px center;
+                    color:$focus-color;
                 }
                 // @include screen('mobile') {
                 //     font-size: 0;

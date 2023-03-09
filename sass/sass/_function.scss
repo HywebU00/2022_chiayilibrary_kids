@@ -27,11 +27,15 @@ div.function {
                 background: $function_color;
                 border-color: $function_color;
                 color: $color-word;
-                &:hover,
-                &:focus {
+                &:hover {
                     background: darken($aHover, 0);
                     border-color: darken($aHover, 0);
                     color: #fff;
+                }
+                &:focus {
+                    border: dotted 2px $focus-boder;
+                    background: $focus-bg;
+                    color:$focus-color;
                 }
             }
             // 回上一頁
@@ -173,8 +177,11 @@ div.function {
                 color:$color-word;
                 display: block;
                 padding: 50px .5em .5em .5em;
-                &:hover, &:focus{
+                &:hover{
                     color:$primaryColor;
+                }
+                &:focus{
+                    color:$focus-color; 
                 }
             }
 
@@ -183,9 +190,13 @@ div.function {
             a{
                 background: url('../images/fun2icon01.png')no-repeat center top;
                 background-size: 48px auto;
-                &:hover, &:focus{
+                &:hover{
                     background: url('../images/fun2icon01ov.png')no-repeat center top;
                     background-size: 48px auto; 
+                }
+                &:focus{
+                    background: $focus-bg url('../images/fun2icon01.png')no-repeat center top;
+                    background-size: 48px auto;
                 }
             }
         }
@@ -193,8 +204,12 @@ div.function {
             a{
                 background: url('../images/fun2icon02.png')no-repeat center top;
                 background-size: 48px auto;
-                &:hover, &:focus{
+                &:hover{
                     background: url('../images/fun2icon02ov.png')no-repeat center top;
+                    background-size: 48px auto; 
+                }
+                &:focus{
+                    background: $focus-bg url('../images/fun2icon02.png')no-repeat center top;
                     background-size: 48px auto; 
                 }
             }
@@ -203,8 +218,12 @@ div.function {
             a{
                 background: url('../images/fun2icon03.png')no-repeat center top;
                 background-size: 48px auto;
-                &:hover, &:focus{
+                &:hover{
                     background: url('../images/fun2icon03ov.png')no-repeat center top;
+                    background-size: 48px auto; 
+                }
+                &:focus{
+                    background:$focus-bg url('../images/fun2icon03.png')no-repeat center top;
                     background-size: 48px auto; 
                 }
             }
@@ -213,8 +232,12 @@ div.function {
             a{
                 background: url('../images/fun2icon04.png')no-repeat center top;
                 background-size: 48px auto;
-                &:hover, &:focus{
+                &:hover{
                     background: url('../images/fun2icon04ov.png')no-repeat center top;
+                    background-size: 48px auto; 
+                }
+                &:focus{
+                    background:$focus-bg url('../images/fun2icon04.png')no-repeat center top;
                     background-size: 48px auto; 
                 }
             }

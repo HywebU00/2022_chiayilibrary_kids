@@ -275,8 +275,11 @@ section {
             box-shadow: 0 0px 0px 2px $primaryColor inset;
         }
         &:focus{
-            box-shadow: 0 0px 0px 2px $aHover inset;
-            background: $secondaryColor;
+            // box-shadow: 0 0px 0px 2px $aHover inset;
+            // background: $secondaryColor;
+            border: dotted 2px $focus-boder;
+            background: $focus-bg;
+            color:$focus-color;
         }
         @include screen('mobile') {
             font-size: 0;
@@ -299,7 +302,7 @@ section {
         }
     }
     .close-btn{
-        background: $secondaryColor;
+        background: darken($secondaryColor,15);
         color:#fff;
         min-width: 1em;
         width: 2em;
@@ -312,123 +315,133 @@ section {
         right:0;
         top:0;
         &:hover{
-           background: darken($secondaryColor,15); 
-       }
-   }
-   .login-animate-right{
-    width: 300px;
-    min-height: 5em;
-    padding:2.5em 1em 1em;
-    margin-left: 3.6em;
-    background: rgba(0, 0, 0, 1);
-    color:#fff;
-    font-size: .875em;
-    position: relative;
-    @include screen('mobile') {
-        padding:2em 1em 1em;
-        margin-left: 0em;
-        margin-top: 60px;
-        width: 320px;
-    }
-}
-.form_inline{
-    input[type="text"]{
-        width: 70%;
-        padding: 3px 5px;
-        @include screen('mobile') {
-            width: 80%;
+            background: darken($secondaryColor,20);
+        }
+        &:focus{
+            background: $focus-bg;
+            border: dotted 2px $focus-boder;
+            color:$focus-color;
         }
     }
-    input[type="password"]{
-        width: 70%;
-        padding: 3px 5px;
-        @include screen('mobile') {
-            width: 80%;
-        }
-    }
-    .btn_grp{
-        padding: 0;
-        .btn{
-            min-width: 6em;
-            background: darken($secondaryColor,15);
-            color:#fff;
-            border: none;
-            &:hover{
-                background: darken($secondaryColor,25); 
-            }
-        }
-
-    }
-    @include screen('mobile') {
-        label{
-            display: inline-block;
-        }
-    }
-
-}
-.reader{
-    margin: .5em 0;
-    font-size: 1.125em;
-}
-ul{
-    padding: 0 0 2em 0;
-    margin:0;
-    display: inline-block;
-    vertical-align: middle;
-    @include screen('mobile') {
-        margin: .5em 0;
-    }
-    li{
+    .login-animate-right{
+        width: 300px;
+        min-height: 5em;
+        padding:2.5em 1em 1em;
+        margin-left: 3.6em;
+        background: rgba(0, 0, 0, 1);
+        color:#fff;
+        font-size: .875em;
         position: relative;
-        margin:.1em 5px;
-        padding-left: 10px;
-        list-style: none;
-        display: block;
-        &:before{
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 1em;
-            background-color: $lightColor;
-            left:0;
-            top:.35em;
-            opacity:.85;
-        }
-
-        &.reader_overdue{
-            span{
-                background: $color-red;
-                color:#fff;
-            }
-        }
-        &.reader_violation{
-            span{
-                background: $color-red;
-                color:#fff;
-            }
-        }
-        &.reader_arrival{
-            span{
-                background: $color-red;
-                color:#fff;
-            }
-        }
-        span{
-            margin:0 .312em;
-            min-width: 18px;
-            height: 18px;
-            border-radius: .31em;
-            display: inline-block;
-            text-align: center;
-            font-family: Georgia;
-            font-weight: bold;
-            line-height: 1;
-            vertical-align:top;
-            margin-top: 2px;
-            background: $color-green;
+        @include screen('mobile') {
+            padding:2em 1em 1em;
+            margin-left: 0em;
+            margin-top: 60px;
+            width: 320px;
         }
     }
-}
+    .form_inline{
+        input[type="text"]{
+            width: 70%;
+            padding: 3px 5px;
+            @include screen('mobile') {
+                width: 80%;
+            }
+        }
+        input[type="password"]{
+            width: 70%;
+            padding: 3px 5px;
+            @include screen('mobile') {
+                width: 80%;
+            }
+        }
+        .btn_grp{
+            padding: 0;
+            .btn{
+                min-width: 6em;
+                background: darken($secondaryColor,15);
+                color:#fff;
+                border: none;
+                &:hover{
+                    background: darken($secondaryColor,25); 
+                }
+                &:focus{
+                    border: dotted 2px $focus-boder!important;
+                    background: $focus-bg!important;
+                    color:$focus-color!important;
+                }
+            }
+
+        }
+        @include screen('mobile') {
+            label{
+                display: inline-block;
+            }
+        }
+
+    }
+    .reader{
+        margin: .5em 0;
+        font-size: 1.125em;
+    }
+    ul{
+        padding: 0 0 2em 0;
+        margin:0;
+        display: inline-block;
+        vertical-align: middle;
+        @include screen('mobile') {
+            margin: .5em 0;
+        }
+        li{
+            position: relative;
+            margin:.1em 5px;
+            padding-left: 10px;
+            list-style: none;
+            display: block;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 1em;
+                background-color: $lightColor;
+                left:0;
+                top:.35em;
+                opacity:.85;
+            }
+
+            &.reader_overdue{
+                span{
+                    background: $color-red;
+                    color:#fff;
+                }
+            }
+            &.reader_violation{
+                span{
+                    background: $color-red;
+                    color:#fff;
+                }
+            }
+            &.reader_arrival{
+                span{
+                    background: $color-red;
+                    color:#fff;
+                }
+            }
+            span{
+                margin:0 .312em;
+                min-width: 18px;
+                height: 18px;
+                border-radius: .31em;
+                display: inline-block;
+                text-align: center;
+                font-family: Georgia;
+                font-weight: bold;
+                line-height: 1;
+                vertical-align:top;
+                margin-top: 2px;
+                background: $color-green;
+            }
+        }
+    }
 
 }
 // .login-animate-right{position:relative;animation:animateright 0.4s}
@@ -438,7 +451,7 @@ ul{
 }
 .birdbox2{
     @include screen('mobile') {
-     .bird1, .bird2, .bird3, .bird4{
+       .bird1, .bird2, .bird3, .bird4{
         display: none;
     }
 }
@@ -623,7 +636,7 @@ ul{
         }
     }
     @include screen('tablet') {
-     @keyframes nbird4 {
+       @keyframes nbird4 {
         0% {
             transform:scale(0.8) rotate(0deg);
             top:605px;
@@ -643,7 +656,7 @@ ul{
 
 }
 @include screen('mobile') {
- @keyframes nbird4 {
+   @keyframes nbird4 {
     0% {
         transform:scale(0.6) rotate(0deg);
         top:490px;
@@ -733,7 +746,7 @@ ul{
         }
     }
     @include screen('mobile') {
-     img{
+       img{
         width: 30px;
     }
     @keyframes nbird6 {
